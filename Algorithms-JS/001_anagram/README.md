@@ -35,7 +35,7 @@ create function called "isAnagramValid"
     Return true
 ```
 
-# Instructions to execute it
+# How to use it
 * Download index .html and .js
 * Save them in some folder
 * Run in your preferred browser the index.html

@@ -1,3 +1,8 @@
-# clock
+# Description
 
-This code runs a clock in real time. The code just has to be placed in a .html file and run it in a browser.
+This code runs a clock in real time.
+
+# How to use it
+* Download index .html
+* Save it in some folder
+* Run in your preferred browser the index.html

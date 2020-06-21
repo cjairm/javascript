@@ -1,10 +1,11 @@
-# react-app-flickr
+# Flickr App - React JS
 
 This project contains an example that request a recent public photos from Flickr
 
 React + Material UI
 
-# How to use the downloaded files
+# How to use it
 
-1) Run "npm install" in the extracted folder
-2) Run "npm start" to view the project
+* Download the files
+* Run "npm install" in the extracted folder
+* Run "npm start" to view the project
