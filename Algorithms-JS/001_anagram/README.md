@@ -16,9 +16,10 @@ Given two strings, write a function to determine if the second string is an anag
 
 # Pseudo code
 
-This was my thinking before the resolve the problem.
+This was my thinking before resolve the problem.
 ```
 create function called "isAnagramValid"
+
     if both strings has the same length... we continue
 
     Iterate first string and save how many letters exists
@@ -26,6 +27,7 @@ create function called "isAnagramValid"
     Iterate second string and save how many letter exists
 
     Iterate first new array/object created
+    
         if the letter exists. Continue
 
         If number of characters exists. Continue
