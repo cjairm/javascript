@@ -1,34 +1,9 @@
-/*
- *
- * Given two strings, write a function to determine if the second string is an anagramof the first. 
- * An anagram is a word, phrase, or name formed by rearranging the letters of another, such as, 
- * "cinema" formed from "iceman"
- * 
- */
-
-// Examples
-//
-// Inputs | Inputs       | Inputs               | Inputs
-// "", "" | "aaz", "zza" | "anagram", "nagaram" | "awesome", "awesom"
-//
-// Output | Output       | Output               | Output
-// True   | False        | True                 | True
-
-// Pseudo
-//
-// create function called "isAnagramValid"
-    // if both strings has the same length... we continue
-
-    // Iterate first string and save how many letters exists
-
-    // Iterate second string and save how many letter exists
-
-    // Iterate first new array/object created
-        // if the letter exists. Continue
-
-        // If number of characters exists. Continue
-
-    // Return true
+/* =====================================================================
+ * -- Name ------ : Anagram - Algorithm
+ * -- Date ------ : Jun 21, 2020
+ * -- Author ---- : Carlos Mendez
+ * -- Description : Readme
+ ===================================================================== */
 
 const isAnagramValid = (stringOne, stringTwo) => {
     // if both strings has the same length. We continue
