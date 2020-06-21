@@ -27,7 +27,7 @@ create function called "isAnagramValid"
     Iterate second string and save how many letter exists
 
     Iterate first new array/object created
-    
+
         if the letter exists. Continue
 
         If number of characters exists. Continue
@@ -43,7 +43,7 @@ create function called "isAnagramValid"
 ## Why 0(n)?
 This is just to obtain vizually how fast is the program, and is called Big O notation.
 
-# Same algorithm, different languages
+### Same algorithm, different languages
 
 * [Golang](https://github.com/cjairm/go/tree/master/Algorithms-Go)
 * [Python](https://github.com/cjairm/python/tree/master/Algoritms-Py)

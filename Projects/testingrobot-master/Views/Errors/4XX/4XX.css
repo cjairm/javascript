@@ -1,0 +1,13 @@
+.fourxx-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.page-not-found-text {
+    margin-bottom: 25px;
+    font-weight: bold;
+}

@@ -1,0 +1,22 @@
+.header-container {
+    flex-grow: 1;
+}
+
+.header-container .MuiToolbar-root {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.app-name a {
+    margin: auto 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.app-bar .MuiToolbar-root {
+    background-color: green;
+}

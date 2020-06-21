@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anaplan test</title>
+
+    <style type="text/css">
+        body {
+            color: #ffffff;
+            background-color: #000000;
+            font-family: sans-serif;
+        }
+
+        /* For clock styling */
+        div.clock {
+            margin: 5px 0; 
+            text-align: center;
+        }
+
+        div.clock div {
+            display: inline-block;
+            position: relative;
+        }
+
+        div.clock div p {
+            font-size: 100px;
+            position: relative;
+            z-index: 100;
+        }
+
+        div.clock .placeholder {
+            color: #131212;
+            position: absolute;
+            top: 0;
+            z-index: 50;
+        }
+
+        div.clock .meridian { 
+            margin-left: 15px; 
+        }
+
+        /* For AM and PM styling*/
+        .am-pm {
+            font-family: sans-serif;
+            text-transform: uppercase;
+            width: 20px;
+        }
+
+        div.am-pm div p {
+            font-size: 12px;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .am, .pm { 
+            color: #131212; 
+        }
+
+        .light-on { 
+            color: #ffffff; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="clock">
+        <!-- For hours -->
+        <div class="numbers">
+            <p class="hours"></p><p class="placeholder">00</p>
+        </div>
+        <div class="colon"><p>:</p></div>
+        
+        <!-- For minutes -->
+        <div class="numbers">
+            <p class="minutes"></p><p class="placeholder">00</p>
+        </div>
+        <div class="colon"><p>:</p></div>
+        
+        <!-- For seconds -->
+        <div class="numbers">
+            <p class="seconds"></p><p class="placeholder">00</p>
+        </div>
+        
+        <!-- am or pm? -->
+        <div class="am-pm">
+            <div><p class="am">am</p></div>
+            <div><p class="pm">pm</p></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        //wait until the window loads
+        window.onload = () => {
+            currentTime();
+            setInterval(() => currentTime(), 1000);
+        };
+
+
+        //gets current time
+        const currentTime = () => {
+            ampm();
+
+            const date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+
+            //make clock a 12 hour clock
+            hours = (hours > 12) ? (hours - 12) : hours;
+            hours = (hours === 0) ? 12 : hours;
+
+            //make sure the digits has at least two digits
+            hours = hours;
+            minutes = addZero(minutes);
+            seconds = addZero(seconds);
+
+            //print on the DOM
+            document.getElementsByClassName('hours')[0].innerHTML = hours;
+            document.getElementsByClassName('minutes')[0].innerHTML = minutes;
+            document.getElementsByClassName('seconds')[0].innerHTML = seconds;
+        }
+
+        //is it am or pm?
+        const ampm = () => {
+            const date = new Date();
+            let hours = date.getHours();
+            let am = document.getElementsByClassName("am")[0].classList;
+            let pm = document.getElementsByClassName("pm")[0].classList;
+            
+            // change am or pm in the DOM
+            (hours >= 12) ? pm.add("light-on") : am.add("light-on");
+            (hours >= 12) ? am.remove("light-on") : pm.remove("light-on");
+        }
+
+        //place a zero in front of a number less than 9
+        const addZero = val => (val <= 9) ? ("0" + val) : val;
+    </script>
+</body>
+</html>
