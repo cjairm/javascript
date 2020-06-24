@@ -40,8 +40,16 @@ create function called "isAnagramValid"
 * Save them in some folder
 * Run in your preferred browser the index.html
 
+# Author
+
+Carlos Mendez
+
 ## Why 0(n)?
 This is just to obtain vizually how fast is the program, and is called Big O notation.
+
+### Created at 
+
+Jun 21, 2020
 
 ### Same algorithm, different languages
 

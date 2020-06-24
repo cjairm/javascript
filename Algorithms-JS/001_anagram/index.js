@@ -1,10 +1,3 @@
-/* =====================================================================
- * -- Name ------ : Anagram - Algorithm
- * -- Date ------ : Jun 21, 2020
- * -- Author ---- : Carlos Mendez
- * -- Description : Readme
- ===================================================================== */
-
 const isAnagramValid = (stringOne, stringTwo) => {
     // if both strings has the same length. We continue
     const stringOneLength = stringOne.length;
