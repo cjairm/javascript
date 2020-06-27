@@ -2,8 +2,12 @@ const isAnagramValid = (stringOne, stringTwo) => {
     // if both strings has the same length. We continue
     const stringOneLength = stringOne.length;
     const stringTwoLength = stringTwo.length;
-    if (stringOneLength !== stringTwoLength || stringOne === stringTwo) {
+    if (stringOneLength !== stringTwoLength) {
         return false;
+    }
+
+    if (stringOne === stringTwo) {
+        return true;
     }
 
     const stringOneCount = {};
@@ -38,8 +42,4 @@ const isAnagramValid = (stringOne, stringTwo) => {
     return true;
 }
 
-const wordOne = "awesome";
-const wordTwo = "ewesoma";
-const isValid = isAnagramValid(wordOne, wordTwo); // O(3n) => O(n)
-
-console.log(isValid);
+export default isAnagramValid;
