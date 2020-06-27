@@ -54,6 +54,6 @@ Jun 21, 2020
 ### Same algorithm, different languages
 
 * [Golang](https://github.com/cjairm/go/tree/master/Algorithms-Go/001_anagram)
-* [Python](https://github.com/cjairm/python/tree/master/Algoritms-Py)
+* [Python](https://github.com/cjairm/python/tree/master/Algoritms-Py/001_anagram)
 * [TypeScript](https://github.com/cjairm/typescript/tree/master/Algorithms-TS/001_anagram)
-* [C++(Arduino)](https://github.com/cjairm/arduino/tree/master/Algorithms-Cpp)
+* [C++(Arduino)](https://github.com/cjairm/arduino/tree/master/Algorithms-Cpp/001_anagram)
