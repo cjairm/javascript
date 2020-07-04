@@ -1,0 +1,53 @@
+{
+  "name": "unique_values",
+  "version": "1.0.0",
+  "description": "Implement a function called \"countUniqueValues\". Which accepts a sorted array, and counts the unique values in the array. There can be negative numbers in the array, but it always be sorted.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "unique",
+    "unique values",
+    "pointers",
+    "algorithm",
+    "testing",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Carlos Mendez",
+  "license": "ISC",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.jest.json"
+      }
+    },
+    "testMatch": [
+      "**/tests/**.test.+(ts|tsx|js)"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!node-formatter)"
+    ],
+    "moduleNameMapper": {
+      "node-formatter": "<rootDir>/node_modules/node-formatter"
+    }
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-jest": "^26.1.0"
+  }
+}
