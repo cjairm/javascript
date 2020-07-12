@@ -1,0 +1,52 @@
+{
+  "name": "pair_that_sum_zero",
+  "version": "1.0.0",
+  "description": "Write a function called \"SumZero\", which accepts a sorted array of integers. The function should find the first pair where the sum is zero. Return an array that includes both values that sum to zero or undefined if a pair does not exists.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "pair",
+    "sum",
+    "algorithm",
+    "testing",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Carlos Mendez",
+  "license": "ISC",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.jest.json"
+      }
+    },
+    "testMatch": [
+      "**/tests/**.test.+(ts|tsx|js)"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!node-formatter)"
+    ],
+    "moduleNameMapper": {
+      "node-formatter": "<rootDir>/node_modules/node-formatter"
+    }
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-jest": "^26.1.0"
+  }
+}

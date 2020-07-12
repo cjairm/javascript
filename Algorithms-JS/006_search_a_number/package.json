@@ -1,0 +1,52 @@
+{
+  "name": "search_a_number",
+  "version": "1.0.0",
+  "description": "Given a sorted array of integers, write a function called \"SearchNumber\", that accepts a value and returns the index where the value passed to the function is located. If the value is not found, return -1.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "search",
+    "search_number",
+    "algorithm",
+    "testing",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Carlos Mendez",
+  "license": "ISC",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.jest.json"
+      }
+    },
+    "testMatch": [
+      "**/tests/**.test.+(ts|tsx|js)"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!node-formatter)"
+    ],
+    "moduleNameMapper": {
+      "node-formatter": "<rootDir>/node_modules/node-formatter"
+    }
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-jest": "^26.1.0"
+  }
+}

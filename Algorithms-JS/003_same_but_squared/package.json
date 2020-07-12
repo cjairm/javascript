@@ -1,0 +1,52 @@
+{
+  "name": "same_but_squared",
+  "version": "1.0.0",
+  "description": "Write a function called \"SameButSquared\", which accepts two arrays. The function should return true if every value in the array has it's corresponding value squared in the second array. The frequency if values must be the same. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "same",
+    "squared",
+    "algorithm",
+    "testing",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Carlos Mendez",
+  "license": "ISC",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.jest.json"
+      }
+    },
+    "testMatch": [
+      "**/tests/**.test.+(ts|tsx|js)"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!node-formatter)"
+    ],
+    "moduleNameMapper": {
+      "node-formatter": "<rootDir>/node_modules/node-formatter"
+    }
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-jest": "^26.1.0"
+  }
+}

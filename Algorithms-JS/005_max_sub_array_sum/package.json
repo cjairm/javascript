@@ -1,0 +1,52 @@
+{
+  "name": "max_sub_array_sum",
+  "version": "1.0.0",
+  "description": "Write a function called \"MaxSubArraySum\", which accepts an array of integers and a number called `n`. The function should calculate the maximum sum of `n` consecutive elements in the array.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "sub_array",
+    "max_sum",
+    "algorithm",
+    "testing",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Carlos Mendez",
+  "license": "ISC",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.jest.json"
+      }
+    },
+    "testMatch": [
+      "**/tests/**.test.+(ts|tsx|js)"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!node-formatter)"
+    ],
+    "moduleNameMapper": {
+      "node-formatter": "<rootDir>/node_modules/node-formatter"
+    }
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-jest": "^26.1.0"
+  }
+}
