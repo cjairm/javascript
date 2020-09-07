@@ -83,12 +83,7 @@ const mergeArr = (arr1, arr2) => {
 };
 
 function arraysEqual(_arr1, _arr2) {
-    if (
-        !Array.isArray(_arr1) ||
-        !Array.isArray(_arr2) ||
-        _arr1.length !== _arr2.length
-    )
-        return false;
+    if (_arr1.length !== _arr2.length) return false;
 
     var arr1 = sortedEl(_arr1);
     var arr2 = sortedEl(_arr2);
