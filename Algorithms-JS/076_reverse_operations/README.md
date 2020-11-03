@@ -27,7 +27,7 @@ list = [1, 2, 8, 9, 12, 16]
 **Output:**
 [1, 8, 2, 9, 16, 12]
 
-`
+``
 // Java implementation of the approach 
 import java.util.*; 
 
@@ -134,7 +134,7 @@ public static void main(String[] args)
 } 
 
 // This code is contributed by PrinciRaj1992 
-`
+``
 
 # Author
 Carlos Mendez
