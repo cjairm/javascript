@@ -88,7 +88,7 @@ const C1: React.FC<IProps> = ({ timeRange }) => {
 	const query = genQuery(timeRange, "c1", Math.random());
 	const data: CRUDResponse = useFetch(
 		refreshInterval_Secs,
-		METRIC_ENDPOINT + "?query=" + query
+		`${METRIC_ENDPOINT}?query=${query}`
 	); //TODO fetch data;
 
 	if (data.loading) return <Loading />;
@@ -100,7 +100,7 @@ const C2: React.FC<IProps> = ({ timeRange }) => {
 	const query = genQuery(timeRange, "c2", Math.random());
 	const data: CRUDResponse = useFetch(
 		refreshInterval_Secs,
-		METRIC_ENDPOINT + "?query=" + query
+		`${METRIC_ENDPOINT}?query=${query}`
 	); //TODO fetch data;
 
 	if (data.loading) return <Loading />;
@@ -112,7 +112,7 @@ const C3: React.FC<IProps> = ({ timeRange }) => {
 	const query = genQuery(timeRange, "c3", Math.random());
 	const data: CRUDResponse = useFetch(
 		refreshInterval_Secs,
-		METRIC_ENDPOINT + "?query=" + query
+		`${METRIC_ENDPOINT}?query=${query}`
 	); //TODO fetch data;
 
 	if (data.loading) return <Loading />;
@@ -124,7 +124,7 @@ const C4: React.FC<IProps> = ({ timeRange }) => {
 	const query = genQuery(timeRange, "c4", Math.random());
 	const data: CRUDResponse = useFetch(
 		refreshInterval_Secs,
-		METRIC_ENDPOINT + "?query=" + query
+		`${METRIC_ENDPOINT}?query=${query}`
 	); //TODO fetch data;
 
 	if (data.loading) return <Loading />;
@@ -136,7 +136,7 @@ const C5: React.FC<IProps> = ({ timeRange }) => {
 	const query = genQuery(timeRange, "c5", Math.random());
 	const data: CRUDResponse = useFetch(
 		refreshInterval_Secs,
-		METRIC_ENDPOINT + "?query=" + query
+		`${METRIC_ENDPOINT}?query=${query}`
 	); //TODO fetch data;
 
 	if (data.loading) return <Loading />;
