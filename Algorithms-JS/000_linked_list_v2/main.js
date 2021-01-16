@@ -25,31 +25,37 @@ class SinglyLinkedList {
 
 		return this;
 	}
+
+	pop() {
+		if (this.length === 0) {
+			return undefined;
+		} else {
+			let currentNode = this.head;
+			let previousNode = currentNode;
+			while (currentNode.next !== null) {
+				previousNode = currentNode;
+				currentNode = currentNode.next;
+			}
+
+			this.tail = previousNode;
+			this.tail.next = null;
+			this.length--;
+
+			return currentNode.val;
+		}
+	}
+
+	print() {
+		let currentNode = this.head;
+		const values = [];
+
+		while (currentNode !== null) {
+			values.push(currentNode.val);
+			currentNode = currentNode.next;
+		}
+
+		return values;
+	}
 }
 
-(function () {
-	const sll = new SinglyLinkedList();
-
-	//Regarding Push TESTS
-	console.log(sll.push(5));
-	console.log(sll.length);
-	console.log(sll.head.val);
-	console.log(sll.tail.val);
-
-	console.log("===");
-
-	console.log(sll.push(10));
-	console.log(sll.length);
-	console.log(sll.head.val);
-	console.log(sll.head.next.val);
-	console.log(sll.tail.val);
-
-	console.log("===");
-
-	console.log(sll.push(15));
-	console.log(sll.length);
-	console.log(sll.head.val);
-	console.log(sll.head.next.val);
-	console.log(sll.head.next.next.val);
-	console.log(sll.tail.val);
-})();
+module.exports = SinglyLinkedList;
