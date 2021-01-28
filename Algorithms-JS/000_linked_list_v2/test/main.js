@@ -1,4 +1,4 @@
-const assert = require("assert");
+const expect = require("chai").expect;
 
 const SingleLinkedList = require("../main.js");
 
@@ -6,28 +6,28 @@ const sll = new SingleLinkedList();
 
 describe("Push Method - SingleLinkedList", () => {
 	it("No elements", () => {
-		assert.equal(0, sll.length);
+		expect(sll).to.have.lengthOf(0);
 	});
 
 	it("1 element", () => {
 		sll.push(5);
-		assert.equal(1, sll.length);
-		assert.equal(5, sll.head.val);
-		assert.equal(5, sll.tail.val);
+		expect(sll).to.have.lengthOf(1);
+		expect(sll.head.val).to.equal(5);
+		expect(sll.tail.val).to.equal(5);
 	});
 
 	it("2 elements", () => {
 		sll.push(10);
-		assert.equal(2, sll.length);
-		assert.equal(10, sll.head.next.val);
-		assert.equal(10, sll.tail.val);
+		expect(sll).to.have.lengthOf(2);
+		expect(sll.head.val).to.equal(5);
+		expect(sll.tail.val).to.equal(10);
 	});
 
 	it("3 elements", () => {
 		sll.push(15);
-		assert.equal(3, sll.length);
-		assert.equal(15, sll.head.next.next.val);
-		assert.equal(15, sll.tail.val);
+		expect(sll).to.have.lengthOf(3);
+		expect(sll.head.val).to.equal(5);
+		expect(sll.tail.val).to.equal(15);
 	});
 
 	it("n elements", () => {
@@ -40,29 +40,46 @@ describe("Push Method - SingleLinkedList", () => {
 			sll2.push(i);
 		}
 
-		assert.equal(randomNumber, sll2.length);
-		assert.equal(randomNumber, sll2.tail.val);
+		expect(sll2).to.have.lengthOf(randomNumber);
+		expect(sll2.tail.val).to.equal(randomNumber);
 	});
 });
 
 describe("Pop Method - SingleLinkedList", () => {
 	it("Remove last element (15)", () => {
-		assert.equal(15, sll.pop());
-		assert.equal(2, sll.length);
+		expect(sll).to.have.lengthOf(3);
+		expect(sll.pop()).to.equal(15);
 	});
 
 	it("Remove last element (10)", () => {
-		assert.equal(10, sll.pop());
-		assert.equal(1, sll.length);
+		expect(sll).to.have.lengthOf(2);
+		expect(sll.pop()).to.equal(10);
 	});
 
 	it("Remove last element (5)", () => {
-		assert.equal(5, sll.pop());
-		assert.equal(0, sll.length);
+		expect(sll).to.have.lengthOf(1);
+		expect(sll.pop()).to.equal(5);
 	});
 
 	it("Remove from empty list", () => {
-		assert.equal(undefined, sll.pop());
-		assert.equal(0, sll.length);
+		expect(sll).to.have.lengthOf(0);
+		expect(sll.pop()).to.equal(undefined);
 	});
+});
+
+describe("Get Method - SingleLinkedList", () => {
+	before(() => {
+		const randomNumber = Math.floor(Math.random() * 100 + 1);
+
+		let i = 0;
+		while (i < randomNumber) {
+			sll.push(Math.floor(Math.random() * 20 + 1));
+			i++;
+		}
+	});
+
+	it("Get value from position 0", () => {});
+	it("Get value from position outbounds", () => {});
+	it("Get value from position negative number", () => {});
+	it("Get value from position (n)", () => {});
 });
