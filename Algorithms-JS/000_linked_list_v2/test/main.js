@@ -73,7 +73,7 @@ describe("Get Method - SingleLinkedList", () => {
 
 		let i = 0;
 		while (i < randomNumber) {
-			sll.push(Math.floor(Math.random() * 20 + 1));
+			sll.push(Math.floor(Math.random() * 50 + 1));
 			i++;
 		}
 	});
