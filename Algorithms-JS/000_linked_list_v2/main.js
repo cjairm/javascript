@@ -55,6 +55,7 @@ class SinglyLinkedList {
 				currentNode = currentNode.next;
 				counter++;
 			}
+
 			return currentNode.val;
 		}
 	}
