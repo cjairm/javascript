@@ -45,6 +45,20 @@ class SinglyLinkedList {
 		}
 	}
 
+	get(pos) {
+		if (this.length === 0 || pos < 0 || pos >= this.length) {
+			return undefined;
+		} else {
+			let counter = 0;
+			let currentNode = this.head;
+			while (counter !== pos) {
+				currentNode = currentNode.next;
+				counter++;
+			}
+			return currentNode.val;
+		}
+	}
+
 	print() {
 		let currentNode = this.head;
 		const values = [];

@@ -69,17 +69,29 @@ describe("Pop Method - SingleLinkedList", () => {
 
 describe("Get Method - SingleLinkedList", () => {
 	before(() => {
-		const randomNumber = Math.floor(Math.random() * 100 + 1);
-
 		let i = 0;
-		while (i < randomNumber) {
+		sll.push(1);
+		while (i < 50) {
 			sll.push(Math.floor(Math.random() * 50 + 1));
 			i++;
 		}
+		sll.push(52);
 	});
 
-	it("Get value from position 0", () => {});
-	it("Get value from position outbounds", () => {});
-	it("Get value from position negative number", () => {});
-	it("Get value from position (n)", () => {});
+	it("Get value from position 0", () => {
+		expect(sll).to.have.lengthOf(52);
+		expect(sll.get(0)).to.equal(1);
+	});
+
+	it("Get value from position outbounds", () => {
+		expect(sll.get(60)).to.equal(undefined);
+	});
+
+	it("Get value from position negative number", () => {
+		expect(sll.get(-1)).to.equal(undefined);
+	});
+
+	it("Get value from position (n)", () => {
+		expect(sll.get(Math.floor(Math.random() * 50 + 1))).not.undefined;
+	});
 });
